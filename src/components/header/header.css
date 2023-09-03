@@ -1,0 +1,25 @@
+.header {
+  min-height: 40px;
+  background: #04AA6D;
+}
+
+.header .logo {
+  float: left;
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header .user {
+  float: right;
+  padding: 10px;
+}
+
+.header .user span {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.header a {
+  color: #fff;
+}

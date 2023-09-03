@@ -1,0 +1,17 @@
+.login .login-header {
+  height: 150px;
+  background: #04AA6D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+
+.login .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  flex-direction: column;
+}

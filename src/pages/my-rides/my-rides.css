@@ -1,0 +1,46 @@
+.my-rides .rides {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.my-rides .rides h4 {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: normal;
+  background: #999;
+}
+
+.my-rides .ride {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.my-rides .ride .left-section {
+  width: 70%;
+  display: inline-block;
+}
+
+.my-rides .ride .right-section {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+
+.my-rides .ride .right-section button {
+  width: auto;
+  font-size: 12px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.my-rides .ride .right-section button.grey-color {
+  background: #999;
+  border: 1px solid #999;
+}

@@ -1,0 +1,45 @@
+.find-ride .search-results {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.find-ride .search-results h4 {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: normal;
+    background: #999;
+}
+
+.find-ride .ride {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.find-ride .ride .left-section {
+    width: 70%;
+    display: inline-block;
+}
+
+.find-ride .ride .right-section {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.find-ride .ride .right-section button {
+    width: auto;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.find-ride .ride .right-section button.grey-color {
+    background: #999;
+    border: 1px solid #999;
+}

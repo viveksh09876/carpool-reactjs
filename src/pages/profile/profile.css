@@ -1,0 +1,42 @@
+.profile label {
+  float: left;
+  color: #333;
+  margin-top: 10px;
+}
+
+.profile .time {
+  float: right;
+  width: auto;
+}
+
+.profile .container {
+  display: block;
+  width: 750px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile .container .content {
+  display: block;
+}
+
+.profile .container .content .box {
+  width: 45%;
+  margin-right: 30px;
+  display: inline-block;
+}
+
+.profile .container .content .box button {
+  margin-top: 10px;
+}
+
+.profile .container .content .box select {
+  margin-bottom: 0;
+}
+
+.profile .container .content .box a {
+  float: right;
+  font-size: 14px;
+}
