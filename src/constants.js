@@ -10,6 +10,8 @@ const userProfile = {
     vehicleBrand: '',
     vehicleModel: '',
     fuelType: '',
+    greenCredits: 0,
+    coReduced: 0,
     seats: ''
   },
   zeroPad = num => String(num).padStart(2, "0"),

@@ -27,6 +27,8 @@ const OfferRide = () => {
           destination,
           dateTime,
           availableSeats,
+          greenCredits: 0,
+          coReduced: 0,
           vehicleBrand: userDetails.vehicleBrand,
           vehicleModel: userDetails.vehicleModel,
           fuelType: userDetails.fuelType,
