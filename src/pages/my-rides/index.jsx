@@ -27,6 +27,11 @@ const MyRides = () => {
               if (isRideRequested) {
                 return true
               }
+
+              const isRideAccepted = ride.riders.find(x => x.username = user.username)
+              if (isRideAccepted) {
+                return true
+              }
             }
             return false
           })
@@ -59,6 +64,9 @@ const MyRides = () => {
                     </div>
                     <div className='right-section'>
                       <div className='ride-status'>Ride Status: <strong>{ride.status.charAt(0).toUpperCase() + ride.status.slice(1)}</strong></div>
+                      {ride.status == 'completed' && 
+                        <div className='ride-footprint'>Carbon footprint reduced: <span className='footprint'>{ride.coReduced} tons</span></div>
+                      }
                       {isRideAlreadyRequested && 
                         <div className={`request-status ${isRideAlreadyRequested.status}`}>Request Status: <span className={isRideAlreadyRequested.status}>{isRideAlreadyRequested.status.charAt(0).toUpperCase() + isRideAlreadyRequested.status.slice(1)}</span></div>
                       }

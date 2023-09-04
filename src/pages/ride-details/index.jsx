@@ -20,9 +20,31 @@ const RideDetails = () => {
       updateRideData(updated, params.rideId, `Ride ${updated.status} successfully!`)
     },
     endRide = () => {
-      const updated = { ...rideDetails, status: 'completed' }
+      const totalRiders = rideDetails.riders.length + 1;
+      const updated = { ...rideDetails, status: 'completed', coReduced: totalRiders*0.05, greenCredits: totalRiders*5 }
       setRideDetails(updated);
       updateRideData(updated, params.rideId, `Ride ${updated.status} successfully!`)
+
+      //give green credits
+      Store.getItem('allUsers', (err, val) => {
+        const allRiders = rideDetails.riders.map(rider => rider.username);
+        allRiders.push(rideDetails.username);
+        const updatedUsers = val.map(user => {
+          if (allRiders.includes(user.username)) {
+            user.greenCredits += 5;
+            user.coReduced += totalRiders*0.05
+          }
+
+          if (user.username == rideDetails.username) {
+            Store.setItem('userDetails', user);
+          }
+          return user;
+        });
+
+        Store.setItem('allUsers', updatedUsers).then(() => {
+          toast.success(`You've earned 5 green credits!`)
+        });
+      });
     },
     cancelRide = () => {
       const updated = { ...rideDetails, status: 'cancelled' }
@@ -57,7 +79,7 @@ const RideDetails = () => {
         riders: allRiders,
         rideRequests: updatedRequests
       }
-
+      setRideDetails(updated);
       updateRideData(updated, params.rideId, `Rider request accepted!`)
     },
     rejectRequest = (username) => {
@@ -68,7 +90,7 @@ const RideDetails = () => {
         ...rideDetails,
         rideRequests: updatedRequests
       }
-
+      setRideDetails(updated);
       updateRideData(updated, params.rideId, `Rider request rejected!`)
     }
 
@@ -127,6 +149,12 @@ const RideDetails = () => {
                 <label>Status: </label>
                 <span>{rideDetails.status.charAt(0).toUpperCase() + rideDetails.status.slice(1)}</span>
               </div>
+              {rideDetails.status == 'completed' &&
+                <div className='box'>
+                  <label>Carbon Footprint Reduced: </label>
+                  <span className='footprint fade'>{rideDetails.coReduced} tons</span>
+                </div>
+              }
             </div>
             {isMyRide &&
               <>

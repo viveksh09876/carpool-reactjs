@@ -13,7 +13,7 @@ const addMinutes = (date, minutes) => {
           const rideStartTime = new Date(item.dateTime).getTime()
           return item.destination == destination &&
                   minDateTimeBound <= rideStartTime &&
-                  rideStartTime < maxDateTimeBound && isNearBy && item.status == 'scheduled' &&
+                  rideStartTime < maxDateTimeBound && item.status == 'scheduled' &&
                   item.availableSeats > 0
         }
     });

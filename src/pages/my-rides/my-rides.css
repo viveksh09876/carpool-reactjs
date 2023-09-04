@@ -22,12 +22,12 @@
 }
 
 .my-rides .ride .left-section {
-  width: 70%;
+  width: 60%;
   display: inline-block;
 }
 
 .my-rides .ride .right-section {
-  width: 30%;
+  width: 40%;
   display: inline-block;
   vertical-align: top;
   text-align: right;
@@ -43,4 +43,8 @@
 .my-rides .ride .right-section button.grey-color {
   background: #999;
   border: 1px solid #999;
+}
+
+.my-rides .ride .ride-footprint {
+  margin: 7px 0;
 }

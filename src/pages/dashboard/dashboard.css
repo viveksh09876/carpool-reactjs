@@ -5,3 +5,48 @@
 .dashboard .container {
   margin-top: 0;
 }
+
+.dashboard .top-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard .top-section .street {
+  width: 500px;
+  border: 2px solid #04AA6D;
+  height: 90px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: block;
+  padding: 10px;
+}
+
+.dashboard .footprint p {
+  text-align: left;
+}
+
+.dashboard .footprint p strong{
+  color: #fff;
+  background: #04AA6D;
+  padding: 1px 5px;
+  border-radius: 5px;
+  opacity: 1;
+  animation: fade 2s infinite linear;
+}
+
+.car-movement {
+	z-index: 100;
+	animation: drift 5s linear infinite;
+  position: relative;
+  margin-top: -5px;
+}
+
+@keyframes drift {
+	from {
+		transform: translateX(-300px);
+	}
+	to {
+		transform: translateX(300px);
+	}
+}
