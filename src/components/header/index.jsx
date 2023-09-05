@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import Store from '../../store'
+import logo from '../../images/natwest-logo.svg'
+import headerImg1 from '../../images/carpool-header-2.png'
 import './header.css'
 
 const Header = () => {
@@ -26,7 +28,10 @@ const Header = () => {
     <>
       {user !== '' && userDetails && userDetails.isLoggedIn && (
       <div className="header">
-        <div className="logo">Sehyog</div>
+        <div className="logo">
+          <img src={headerImg1} />
+        </div>
+        <div className='app-name'><strong>SEHYOG</strong><br/><span>Collaborating for a greener ride!!</span></div>
         <div className="user">
           <span>{ user }</span>
           <a onClick={logout}>Logout</a>

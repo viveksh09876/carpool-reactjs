@@ -1,25 +1,41 @@
 .header {
-  min-height: 40px;
-  background: #04AA6D;
+  min-height: 71px;
+  background: #fff;
+  color: #04AA6D;
+  border-bottom: 1px solid #ccc;
 }
 
 .header .logo {
   float: left;
-  padding: 10px;
   font-weight: bold;
   color: #fff;
+  height: 69px;
+}
+
+.header .logo img {
+  height: 69px;
+} 
+
+.header .app-name {
+  color: #04AA6D;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.header .app-name span {
+  font-size: 14px;
 }
 
 .header .user {
   float: right;
-  padding: 10px;
+  padding: 25px 10px;
 }
 
 .header .user span {
   margin-right: 10px;
-  color: #fff;
+  color: #04AA6D;
 }
 
 .header a {
-  color: #fff;
+  color: #04AA6D;
 }

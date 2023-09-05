@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Store from '../../store'
 import { userProfile } from '../../constants'
+import headerImg1 from '../../images/carpool-header-2.png'
+import headerImg2 from '../../images/header-img.png'
 import './login.css'
 
 const Login = () => {
@@ -45,14 +47,21 @@ const Login = () => {
   return (
     <div className="login">
       <div className="login-header">
-        <h1>Carpool App</h1>
+        <img className='img-left' src={headerImg1} />
+        <div className='center'>
+          <h1>SEHYOG</h1>
+          <p>Collaborating for a greener ride!!</p>
+        </div>
+        <img className='img-right' src={headerImg2} />
       </div>
       <div className="login-container">
-        <div className="box">
-          <input type="text" className="input" name="username" placeholder="Enter Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </div>
-        <div className="box">
-          <button type="button" onClick={loginUser}>Login</button>
+        <div className='content'>
+          <div className="box">
+            <input type="text" className="input" name="username" placeholder="Enter Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+          </div>
+          <div className="box">
+            <button type="button" onClick={loginUser}>Login</button>
+          </div>
         </div>
       </div>
     </div>

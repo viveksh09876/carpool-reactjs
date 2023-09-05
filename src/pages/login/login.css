@@ -1,17 +1,48 @@
 .login .login-header {
   height: 150px;
-  background: #04AA6D;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  background: #fff;
+  display: block;
+  color: #04AA6D;
+}
+
+.login .login-header .img-left {
+  height: 100%;
+  float: left;
+}
+
+.login .login-header .center {
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.login .login-header .img-right {
+  height: 100%;
+  float: right;
 }
 
 
 .login .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40vh;
-  flex-direction: column;
+  display: block;
+  height: 80vh;
+  position: relative;
+  padding: 30px;
+  background: url('../../images/carpool-bg.jpg') no-repeat;
+  background-size: cover;
+}
+
+.login .login-container .content {
+  width: 400px;
+  margin: 0 auto;
+  height: auto;
+  padding: 10px 10px 30px 10px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.login .login-container .box {
+  margin: 0 auto;
+}
+
+.login .login-container .box:first-child {
+  margin-top: 30px;
 }

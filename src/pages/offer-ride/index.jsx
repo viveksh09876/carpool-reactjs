@@ -75,36 +75,38 @@ const OfferRide = () => {
     <div className="profile offer-ride">
       <Header />
       <div className="container">
-        <div className="content">
-          <div className="box">
-            <label>Start Address</label>
-            <input type="text" className="input no-mgb" name="startAddress" placeholder="Start Address" value={startAddress} onChange={(e) => setStartAddress(e.target.value)} />
-            <a onClick={toggleModal}>Locate on map</a>
+        <div className='main-content'>
+          <div className="content">
+            <div className="box">
+              <label>Start Address</label>
+              <input type="text" className="input no-mgb" name="startAddress" placeholder="Start Address" value={startAddress} onChange={(e) => setStartAddress(e.target.value)} />
+              <a onClick={toggleModal}>Locate on map</a>
+            </div>
+            <div className="box">
+              <label>Destination Address</label>
+              <select name="destination" onChange={(e) => setDestination(e.target.value)}>
+                {offices.map(item => {
+                  return <option key={item.id} selected={item.id == destination} value={item.address}>{item.address}</option>
+                })}
+              </select>
+            </div>
+            <div className="box">
+              <label>Ride start date/time</label>
+              <input type="datetime-local" className="input" name="dateTime" placeholder="Select date/time" value={dateTime} onChange={(e) => setDateTime(e.target.value)} />
+            </div>
+            <div className="box">
+              <label>Number of seats available</label>
+              <select name="availableSeats" onChange={(e) => setAvailableSeats(e.target.value)}>
+                {seatsArr.map((item, index) => {
+                  return <option key={index} selected={item === availableSeats} value={item}>{item}</option>
+                })}
+              </select>
+            </div>
           </div>
-          <div className="box">
-            <label>Destination Address</label>
-            <select name="destination" onChange={(e) => setDestination(e.target.value)}>
-              {offices.map(item => {
-                return <option key={item.id} selected={item.id == destination} value={item.address}>{item.address}</option>
-              })}
-            </select>
+          <div className="action">
+            <button type="button" onClick={offerRide}>Offer Ride</button>
+            <button className="secondary" type="button" onClick={() => navigate('/dashboard')}>Cancel</button>
           </div>
-          <div className="box">
-            <label>Ride start date/time</label>
-            <input type="datetime-local" className="input" name="dateTime" placeholder="Select date/time" value={dateTime} onChange={(e) => setDateTime(e.target.value)} />
-          </div>
-          <div className="box">
-            <label>Number of seats available</label>
-            <select name="availableSeats" onChange={(e) => setAvailableSeats(e.target.value)}>
-              {seatsArr.map((item, index) => {
-                return <option key={index} selected={item === availableSeats} value={item}>{item}</option>
-              })}
-            </select>
-          </div>
-        </div>
-        <div className="action">
-          <button type="button" onClick={offerRide}>Offer Ride</button>
-          <button className="secondary" type="button" onClick={() => navigate('/dashboard')}>Cancel</button>
         </div>
       </div>
       <Modal show={popupOpened} onClose={toggleModal} />

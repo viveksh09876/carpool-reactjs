@@ -11,11 +11,9 @@
 
 .profile .container {
   display: block;
-  width: 750px;
-  height: 100%;
+  width: 100%;
   position: relative;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .profile .container .content {
@@ -39,4 +37,9 @@
 .profile .container .content .box a {
   float: right;
   font-size: 14px;
+}
+
+.profile .container .action {
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
