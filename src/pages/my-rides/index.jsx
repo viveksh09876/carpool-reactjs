@@ -58,7 +58,7 @@ const MyRides = () => {
                   <div className='ride' key={ride.id}>
                     <div className='ride-details'>
                       <div className='left-section'>
-                        <div>Start Time: <Moment format="DD/MM/YYYY HH:MM">{ride.dateTime}</Moment></div>
+                        <div>Start Time: <Moment format="DD/MM/YYYY hh:mm">{ride.dateTime}</Moment></div>
                         <div>Vehicle: {`${ride.vehicleBrand} ${ride.vehicleModel} (${ride.fuelType})`}</div>
                         <div>Available Seats: {ride.availableSeats}</div>
                         <div>Ride Offered by: {ride.offeredBy || ride.username} (Shift Time: {ride.shiftTiming})</div>

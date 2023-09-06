@@ -132,7 +132,7 @@ const RideDetails = () => {
                 </div>
                 <div className='box'>
                   <label>Start Time: </label>
-                  <span><Moment format="DD/MM/YYYY HH:MM">{rideDetails.dateTime}</Moment></span>
+                  <span><Moment format="DD/MM/YYYY hh:mm">{rideDetails.dateTime}</Moment></span>
                 </div>
                 <div className='box'>
                   <label>Vehicle: </label>
@@ -214,7 +214,7 @@ const RideDetails = () => {
                                 </div>
                                 <div className='box'>
                                   <label>Pickup time: </label>
-                                  <span><Moment format="DD/MM/YYYY HH:MM">{request.dateTime}</Moment></span>
+                                  <span><Moment format="DD/MM/YYYY hh:mm">{request.dateTime}</Moment></span>
                                 </div>
                               </div>
                               <div className='actions'>
