@@ -31,6 +31,21 @@
   padding: 25px 10px;
 }
 
+.header .user .profile-img {
+  margin-top: 2px;
+  float: left;
+  margin-right: 6px;
+  height: 20px;
+}
+
+.header .user a.user-name {
+  text-decoration: none;
+}
+
+.header .user a.user-name:hover {
+  text-decoration: underline;
+}
+
 .header .user span {
   margin-right: 10px;
   color: #04AA6D;

@@ -66,7 +66,7 @@ const MyRides = () => {
                       <div className='right-section'>
                         <div className='ride-status'>Ride Status: <strong>{ride.status.charAt(0).toUpperCase() + ride.status.slice(1)}</strong></div>
                         {ride.status == 'completed' && 
-                          <div className='ride-footprint'>Carbon footprint reduced: <span className='footprint'>{ride.coReduced} tons</span></div>
+                          <div className='ride-footprint'>Carbon footprint reduced: <span className='footprint'>{ride.coReduced} KgCo2e</span></div>
                         }
                         {isRideAlreadyRequested && 
                           <div className={`request-status ${isRideAlreadyRequested.status}`}>Request Status: <span className={isRideAlreadyRequested.status}>{isRideAlreadyRequested.status.charAt(0).toUpperCase() + isRideAlreadyRequested.status.slice(1)}</span></div>

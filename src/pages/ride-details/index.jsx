@@ -153,7 +153,7 @@ const RideDetails = () => {
                 {rideDetails.status == 'completed' &&
                   <div className='box'>
                     <label>Carbon Footprint Reduced: </label>
-                    <span className='footprint fade'>{rideDetails.coReduced} tons</span>
+                    <span className='footprint fade'>{rideDetails.coReduced} KgCo2e</span>
                   </div>
                 }
               </div>
